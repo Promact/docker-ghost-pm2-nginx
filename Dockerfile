@@ -21,6 +21,9 @@ RUN apt-get update && \
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
+# Add default conf for nginx
+ADD default.conf /etc/nginx/conf.d/default.conf
+
 VOLUME ["/var/cache/nginx"]
 
 EXPOSE 80 443
