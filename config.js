@@ -34,8 +34,8 @@ function getDatabase() {
 }
 
 function getMailConfig() {
-  var mail_config = {}
-  var mail_config['auth'] = {}
+  var mail_config = {};
+  mail_config['auth'] = {};
   if (process.env.MAIL_HOST)    { mail_config['host']      = process.env.MAIL_HOST }
   if (process.env.MAIL_SERVICE) { mail_config['service']   = process.env.MAIL_SERVICE }
   if (process.env.MAIL_USER) { mail_config['auth']['user'] = process.env.MAIL_USER }
